@@ -15,7 +15,7 @@ public class Students
     {   String first_name, last_name;
         int grade, total=0, count=0;
         double average;
-        Scanner fileInput = new Scanner(new File("students.txt"));
+        Scanner fileInput = new Scanner(new File("C://Users/ADMIN/Downloads/Algorithm-and-Data-Structure/Lab 1/lab1/src/problem1/students.txt"));
         while (fileInput.hasNext())
         {
             first_name = fileInput.next();

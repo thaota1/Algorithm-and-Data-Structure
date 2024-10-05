@@ -7,8 +7,8 @@ public class arraytonumber {
         return result;
     }
     public static void main(String[] args) {
-    // Example usage:
-    int[] digits = {1, 2, 3, 4, 5}; // represents the number 12345
+    // example 
+    int[] digits = {1, 2, 3, 4, 5};
     int number = arrayToNumber(digits);
     System.out.println("Converted number: " + number);
     }

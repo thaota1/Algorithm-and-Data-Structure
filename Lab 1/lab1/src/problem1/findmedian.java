@@ -20,7 +20,7 @@ public class findmedian {
     }
 
     public static void main(String[] args) {
-        // Example usage:
+        //example
         List<Integer> numbers = new ArrayList<>(Arrays.asList(7, 2, 1, 5, 9, 3, 6, 4, 8));
         double median = findMedian(numbers);
         System.out.println("Median: " + median);
