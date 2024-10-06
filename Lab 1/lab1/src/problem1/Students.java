@@ -9,26 +9,35 @@
 import java.util.Scanner;
 import java.io.*;
 
-public class Students
-{
-    public static void main (String[] args) throws IOException
-    {   String first_name, last_name;
-        int grade, total=0, count=0;
-        double average;
+public class Students {
+    public static void main(String[] args) throws IOException {
+        String firstName, lastName;
+        int grade;
+        int total = 0, count = 0;
+
+        // Read student records from the file
         Scanner fileInput = new Scanner(new File("C://Users/ADMIN/Downloads/Algorithm-and-Data-Structure/Lab 1/lab1/src/problem1/students.txt"));
-        while (fileInput.hasNext())
-        {
-            first_name = fileInput.next();
-            last_name = fileInput.next();
+        while (fileInput.hasNext()) {
+            firstName = fileInput.next();
+            lastName = fileInput.next();
             grade = fileInput.nextInt();
-            
-            Student st = new Student(first_name, last_name, grade);
-            
+
+            // Create a new Student object
+            Student st = new Student(firstName, lastName, grade);
+
+            // Print student details
             System.out.println(st);
-            total = total + grade; 
+
+            // Update total grades and count for overall average
+            total = total + grade;
             count++;
-        }
-        average = (double)total/count;
-        System.out.println("There are " + count + " students with average grade " + average);
+        }fileInput.close();
+
+        // Calculate overall average
+        double average = (double) total / count;
+        System.out.println("\nThere are " + count + " students with an overall average grade of " + average);
+
+        // Print statistics for each category
+        Student.printStatistics();
     }
 }
